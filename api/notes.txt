@@ -1,0 +1,74 @@
+﻿*********** ORM ***********
+Object-Relational Mapping (ORM) is a programming technique used to convert data between incompatible type systems in object-oriented programming languages. 
+This allows developers to work with database data as if they were regular objects in their programming language, simplifying database interactions and improving productivity.
+*********** ORM ***********
+
+
+//****************** Error: Could not execute because the specified command or file was not found ******************//
+This error occurs when the .NET CLI cannot find a command or executable you tried to run, such as dotnet-ef. The full message usually looks like:
+Could not execute because the specified command or file was not found. Possible reasons for this include:
+- You misspelled a built-in dotnet command.
+- You intended to execute a .NET program, but dotnet-ef does not exist.
+- You intended to run a global tool, but a dotnet-prefixed executable with this name could not be found on the PATH.
+To resolve this error, you can try the following steps:
+1. Check for Typos: Ensure that you have spelled the command correctly. For example, if you meant to run the Entity Framework Core command-line tool, make sure you typed dotnet ef instead of dotnet-ef.
+2. Install the Required Tool: If you intended to run a global tool, make sure it is installed. For example, to install the Entity Framework Core CLI tools, you can run:
+   dotnet tool install --global dotnet-ef
+3. Verify PATH Environment Variable: Ensure that the directory where global tools are installed is included in your system's PATH environment variable. You can check this by running:
+   echo $PATH   (on macOS/Linux)
+   echo %PATH%  (on Windows)
+4. Restore Project Dependencies: If you are trying to run a command related to a specific project, make sure to restore the project's dependencies by running:
+   dotnet restore
+5. Check .NET SDK Installation: Ensure that you have the .NET SDK installed on your machine. You can verify this by running:
+   dotnet --version
+6. Update .NET SDK: If you have an older version of the .NET SDK, consider updating to the latest version, as some commands may not be available in older versions.
+If you continue to experience issues after trying these steps, consider consulting the official .NET documentation or seeking help from the .NET community.
+
+OR
+Make sure u downloaded the Entity Framework Core tools (Microsoft.EntityFrameworkCore) via NuGet Package Manager or .NET CLI with the correct version compatible with your project.
+
+//****************** Error: Could not execute because the specified command or file was not found ******************//
+
+//****************** IActionResult ***********//
+IActionResult is an interface in ASP.NET Core MVC that represents the result of an action method. 
+It is used to define various types of responses that an action can return, such as views, JSON data, redirects, or status codes.
+By returning an IActionResult, developers can have more flexibility in controlling the HTTP response sent to the client.
+//****************** IActionResult ***********//
+
+//****************** Task<IActionResult> ***********//
+Task<IActionResult> is an asynchronous version of IActionResult used in ASP.NET Core MVC action methods.
+When an action method returns Task<IActionResult>, it allows for asynchronous operations, such as database calls or external API requests, to be performed without blocking the main thread.
+This improves the scalability and responsiveness of web applications by freeing up resources while waiting for I/O-bound operations to complete.
+//****************** Task<IActionResult> ***********//
+
+
+//****************** AsNoTracking ***********//
+AsNoTracking is a method in Entity Framework Core that allows you to query data without tracking the returned entities in the DbContext's change tracker.
+When you use AsNoTracking, the entities retrieved from the database are not monitored for changes, which can improve performance for read-only operations where you don't need to update the entities later.
+//****************** AsNoTracking ***********//
+
+//****************** DTOs ***********//
+DTOs, or Data Transfer Objects, are simple objects used to transfer data between different layers or components of an application.
+They typically contain only data and no business logic, making them lightweight and easy to serialize.
+DTOs are often used to encapsulate data for communication between a client and server, or between different parts of an application, 
+helping to reduce the amount of data sent over the network and improve performance.
+//****************** DTOs ***********//
+
+//******************      ***********//
+return CreatedAtAction(nameof(GetStok), new { Id = stockDto.ToStockFromCreateDTO().Id }, stockDto.ToStockFromCreateDTO());
+
+//******************      ***********//
+
+
+//****************** Middleware ***********//
+Middleware is software that sits between the operating system and applications, providing common services and capabilities to applications outside of what's offered by the operating system.
+In the context of web development, middleware refers to components that process HTTP requests and responses in a web application pipeline.
+Middleware components can perform various tasks such as authentication, logging, error handling, and request modification before passing the request to the next component in the pipeline or returning a response to the client.
+//****************** Middleware ***********//
+
+
+//****************** Dependency Injection (DI) ***********//
+Dependency Injection (DI) is a design pattern used to implement Inversion of Control (IoC) in software development.
+It allows a class to receive its dependencies from an external source rather than creating them itself. This promotes loose coupling, easier testing, and better maintainability of code.
+In DI, dependencies are typically provided through constructor injection, property injection, or method injection. A DI container is often used to manage the lifecycle and resolution of dependencies.
+//****************** Dependency Injection (DI) ***********//
